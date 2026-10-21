@@ -37,6 +37,9 @@ namespace WiiBalanceWalker
         static public vJoy joystick;
         static public vJoy.JoystickState iReport;
         static public uint id = 1;
+        // vJoy (Shaul Eizikovich) axes are unsigned (typically 0..32768, center 16384), queried at Initialize.
+        static long axisMin = 0;
+        static long axisMax = 32768;
 
 
         public static void Initialize(uint id)  //(string[] args)
@@ -174,6 +177,12 @@ namespace WiiBalanceWalker
             ZR = 80;
 
             joystick.GetVJDAxisMax(id, HID_USAGES.HID_USAGE_X, ref maxval);
+
+            // Setjoystick uses the static id, so keep it in sync with the selected device.
+            VJoyFeeder.id = id;
+            long minval = 0;
+            if (joystick.GetVJDAxisMin(id, HID_USAGES.HID_USAGE_X, ref minval)) axisMin = minval;
+            if (maxval > axisMin) axisMax = maxval;
 
 #if ROBUST
             bool res;
@@ -318,10 +327,18 @@ namespace WiiBalanceWalker
 
         }
 
+        // Map a signed Int16-style value (-32767..+32767, 0 = center) onto the vJoy axis range.
+        static public int ToAxisRange(int value)
+        {
+            if (value < -32767) value = -32767;
+            if (value > 32767) value = 32767;
+            return (int)(axisMin + (value + 32767L) * (axisMax - axisMin) / 65534L);
+        }
+
         static public void Setjoystick(int X, int Y, int Z, int XR, int YR, int ZR, bool aButton)
         {
-            joystick.SetAxis(X, id, HID_USAGES.HID_USAGE_X);
-            joystick.SetAxis(Y, id, HID_USAGES.HID_USAGE_Y);
+            joystick.SetAxis(ToAxisRange(X), id, HID_USAGES.HID_USAGE_X);
+            joystick.SetAxis(ToAxisRange(Y), id, HID_USAGES.HID_USAGE_Y);
             joystick.SetAxis(Z, id, HID_USAGES.HID_USAGE_Z);
             joystick.SetAxis(XR, id, HID_USAGES.HID_USAGE_RX);
             joystick.SetAxis(YR, id, HID_USAGES.HID_USAGE_RY);

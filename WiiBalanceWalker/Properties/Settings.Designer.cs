@@ -313,6 +313,126 @@ namespace WiiBalanceWalker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int LeanSensitivity {
+            get {
+                return ((int)(this["LeanSensitivity"]));
+            }
+            set {
+                this["LeanSensitivity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LeanDeadzone {
+            get {
+                return ((int)(this["LeanDeadzone"]));
+            }
+            set {
+                this["LeanDeadzone"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SendToSteamVR {
+            get {
+                return ((bool)(this["SendToSteamVR"]));
+            }
+            set {
+                this["SendToSteamVR"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SendTwistToRX {
+            get {
+                return ((bool)(this["SendTwistToRX"]));
+            }
+            set {
+                this["SendTwistToRX"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public int TwistDeadzone {
+            get {
+                return ((int)(this["TwistDeadzone"]));
+            }
+            set {
+                this["TwistDeadzone"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int TwistSensitivity {
+            get {
+                return ((int)(this["TwistSensitivity"]));
+            }
+            set {
+                this["TwistSensitivity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool WalkInPlace {
+            get {
+                return ((bool)(this["WalkInPlace"]));
+            }
+            set {
+                this["WalkInPlace"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int WalkStepThreshold {
+            get {
+                return ((int)(this["WalkStepThreshold"]));
+            }
+            set {
+                this["WalkStepThreshold"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int WalkSpeed {
+            get {
+                return ((int)(this["WalkSpeed"]));
+            }
+            set {
+                this["WalkSpeed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public int TwistFull {
+            get {
+                return ((int)(this["TwistFull"]));
+            }
+            set {
+                this["TwistFull"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool StartupAutoConnect {
             get {
@@ -356,6 +476,42 @@ namespace WiiBalanceWalker.Properties {
             }
             set {
                 this["StartMinimized"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int Theme {
+            get {
+                return ((int)(this["Theme"]));
+            }
+            set {
+                this["Theme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int EvaUnit {
+            get {
+                return ((int)(this["EvaUnit"]));
+            }
+            set {
+                this["EvaUnit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool RetroUnlocked {
+            get {
+                return ((bool)(this["RetroUnlocked"]));
+            }
+            set {
+                this["RetroUnlocked"] = value;
             }
         }
     }

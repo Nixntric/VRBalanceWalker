@@ -1,0 +1,7 @@
+{
+	"driver_wbw": {
+		"enable": true,
+		"blocked_by_safe_mode": false,
+		"port": 26790
+	}
+}

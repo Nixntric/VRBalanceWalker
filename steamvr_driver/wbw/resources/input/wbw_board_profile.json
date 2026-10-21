@@ -1,0 +1,38 @@
+{
+	"jsonid": "input_profile",
+	"controller_type": "wbw_board",
+	"device_class": "TrackedDeviceClass_Controller",
+	"driver_name": "wbw",
+	"input_bindingui_mode": "single_device",
+	"input_bindingui_left": {
+		"image": "{wbw}/icons/wbw_board.svg"
+	},
+	"input_bindingui_right": {
+		"image": "{wbw}/icons/wbw_board.svg"
+	},
+	"should_show_binding_errors": true,
+	"default_bindings": [
+		{
+			"app_key": "steam.app.438100",
+			"binding_url": "vrchat_bindings_wbw_board.json"
+		}
+	],
+	"input_source": {
+		"/input/joystick": {
+			"type": "joystick",
+			"binding_image_point": [90, 100],
+			"order": 1
+		},
+		"/input/turn": {
+			"type": "joystick",
+			"binding_image_point": [210, 100],
+			"order": 2
+		},
+		"/input/a": {
+			"type": "button",
+			"click": true,
+			"binding_image_point": [150, 150],
+			"order": 3
+		}
+	}
+}

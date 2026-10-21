@@ -1,0 +1,9 @@
+[
+	{
+		"language_tag": "en_US",
+		"wbw_board": "Wii Balance Board",
+		"/input/joystick": "Lean",
+		"/input/turn": "Twist",
+		"/input/a": "Board Button"
+	}
+]
